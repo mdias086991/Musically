@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Product } from '../product/product';
+import { ProductService } from '../product/product.service';
 
 @Component({
   selector: 'app-home',
@@ -7,33 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-  title1 = "Frete grátis";
-  icon1 = "fas fa-truck";
+  public products$ : Observable<Product[]>
+  public productById$ : Observable<Product[]>
 
-  title2="Presentei alguém!";
-  icon2="fas fa-gift";
-  
-  title3="Suporte durante a compra";
-  icon3="fas fa-headset";
-  
-  title4="Entrega rápida";
-  icon4="fas fa-clock";
-  
-  products = [
-    {'id': 1, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 2, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-    {'id': 3, 'name': 'Violão preto', 'category': 'Violões', 'price': '359,00', 'description': 'violão bem bonito e bem prático para todas as idades', 'image': 'violao.png'},
-  ]
+  constructor(
+    private products : ProductService,
+    private route : ActivatedRoute
+  ) { }
+
   ngOnInit(): void {
-    
+    this.route.params.subscribe( parametros => {
+      if(parametros['category_id']) {
+        // console.log(parametros['category_id'])
+        this.products$ = this.products.getProductsByCategory(parametros['category_id']);
+      } else {
+        this.products$ = this.products.getProducts();
+      }
+    })
   }
 
 }

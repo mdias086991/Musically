@@ -1,3 +1,37 @@
-.navbar {
-    position: absolute;
+.top-header {
+    height: 3rem;
+    border-bottom: 1px solid #c4c4c4;
+}
+.top-header p,
+.top-header a {
+    font-size: 8pt;
+    color: #c5c5c5;
+}
+.menu-category {
+    background: #892F1A;
+    height: 8rem;
+}
+.menu-category .items-menu {
+    height: 100%;
+}
+.menu-category .items-menu nav {
+    height: 100%;
+}
+.menu-category .items-menu nav ul {
+    height: 100%;
+}
+.menu-category .items-menu nav ul a {
+    text-decoration: none;
+}
+.menu-category .items-menu nav ul li {
+    list-style: none;
+}
+.item-link li {
+    color: white;
+}
+.separator {
+    padding: 1px;
+    width: 5%;
+    background: #c5c5c5;
+    transform: rotate(90deg);
 }

@@ -1,28 +1,62 @@
-<nav class="navbar navbar-expand-lg nav-content--color w-100">
-    <div class="container d-flex justify-content-between w-100">
-      <a class="navbar-brand title--size--color" href="#">Musically</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Começar a comprar</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Olá Matheus
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Minhas compras</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Sair</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Meu carrinho</a>
-          </li>
-        </ul>
+<header>
+  <div class="top-header w-100 d-flex justify-content-around align-items-center">
+    <p class="mb-0">Horário de atendimento online: Segunda a Sábado das 09:00 hrs às 18:30</p>
+    <a href="http://">Acessar a área restrita</a>
+    <p class="mb-0">(71) 99225-2762</p>
+  </div>
+  <div class="middle-header w-100 d-flex justify-content-around align-items-center">
+    <div class="logo">
+      <a routerLink="/"><h2>Musically</h2></a> 
+    </div>
+    <div class="left-items d-flex justify-content-around align-items-center mt-5 mb-5" style="width: 54%">
+      <div class="cart" style="position: relative;">
+        <a routerLink="cart" data-bs-toggle="tooltip" title="Você tem {{qtd_products.length}} produtos no carrinho">
+          <span style="position: absolute; top: -20px; right: 0">{{qtd_products.length}}</span>
+          <i class="fas fa-shopping-cart fa-2x"></i>
+        </a>
       </div>
     </div>
-  </nav>
+  </div>
+  <div class="menu-category w-100">
+    <div class="container items-menu">
+        <nav>
+          <ul class="d-flex justify-content-between align-items-center">
+            <a [routerLink]="['/product/category/' + 1]">
+              <div class="item-link text-center">
+                <img src="../../../assets/images/guittar.png" alt="">
+                <li>Cordas</li>
+              </div>
+            </a>
+            <div class="separator"></div>
+            <a href="http://">
+              <div class="item-link text-center">
+                <img src="../../../assets/images/perc.png" alt="">
+                <li>Percussão</li>
+              </div>
+            </a>
+            <div class="separator"></div>
+            <a href="http://">
+              <div class="item-link text-center">
+                <img src="../../../assets/images/sop.png" alt="">
+                <li>Sopro</li>
+              </div>
+            </a>
+            <div class="separator"></div>
+            <a href="http://">
+              <div class="item-link text-center">
+                <img src="../../../assets/images/ace.png" alt="">
+                <li>Acessorios</li>
+              </div>
+            </a>
+            <div class="separator"></div>
+            <a href="http://">
+              <div class="item-link text-center">
+                <img src="../../../assets/images/case.png" alt="">
+                <li>Cases e bags</li>
+              </div>
+            </a>
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>

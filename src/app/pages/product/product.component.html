@@ -1,1 +1,28 @@
-<p>product works!</p>
+<div class="container  mt-5 mb-5" *ngIf="products$ | async as product">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{product['name']}}</li>
+        </ol>
+    </nav>
+    <div class="product-data d-flex justify-content-center align-items-center">
+        <div class="image border" style="margin-right: 10%;">
+            <img src="../../../assets/images/{{product['image']}}" alt="">
+        </div>
+        <div class="information-product">
+            <h2>{{product['name']}}</h2>
+            <p>{{product['description']}}</p>
+            <p>Produto {{product['stock'] > 0 ? 'Disponivel' :' Indisponivel'}}</p>
+            <p>Entrega em no máximo {{product['date_delivery']}}</p>
+            <button>Adicionar a lista de desejos</button>
+            <h4>{{product['price']}}</h4>
+            <hr>
+            <div class="add-to--card">
+                <form (submit)="addCart($event, quantity.value)" enctype="application/x-www-form-urlencoded">
+                    <input type="number" value="1" #quantity id="quantity">
+                    <button >Comparar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

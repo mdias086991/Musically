@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +17,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { FinishSaleComponent } from './pages/finish-sale/finish-sale.component';
 import { ProductComponent } from './pages/product/product.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { BgProductComponent } from './components/bg-product/bg-product.component';
 import { ShopNowComponent } from './pages/shop-now/shop-now.component';
 
 @NgModule({
@@ -33,12 +34,12 @@ import { ShopNowComponent } from './pages/shop-now/shop-now.component';
     FinishSaleComponent,
     ProductComponent,
     DashboardComponent,
-    BgProductComponent,
     ShopNowComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

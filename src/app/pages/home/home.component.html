@@ -1,5 +1,9 @@
-<app-bg-product></app-bg-product>
-<app-bar-information></app-bar-information>
+<div class="information-bar mt-4 mb-4">
+    <app-bar-information></app-bar-information>
+</div>
 <div class="product-card container mt-4">
-    <app-card-product [products]="products"></app-card-product>
+    <div class="title-section-products-general text-center mb-4">
+        <h2>Nossos produtos</h2>
+    </div>
+    <app-card-product [products]="products$ | async"></app-card-product>
 </div>

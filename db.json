@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "mathues2006_dias@hotmail.com",
+      "password": "12345678",
+      "role" : "admin"
+    }
+  ],
+  "category" : [
+    { "id": 1, "name": "Cordas" }, 
+    { "id": 2, "name": "Percussão" }, 
+    { "id": 3, "name": "Sopro" }, 
+    { "id": 4, "name": "Acessorios"}, 
+    { "id": 5, "name": "Cases e bags"} 
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "VIOLÃO TAYLOR GS MINI-E KOA MEXICANO - ELETROACÚSTICO - ACOMPANHA HARD BAG",
+      "price": "10.790,00",
+      "description" : "Uma versão hipnotizante da série GS Mini da Taylor toda produzida em madeira de KOA.",
+      "image": "vio_taylor.jpg",
+      "date_delivery": "2 dias",
+      "stock" : 10,
+      "category" : 1 
+    },
+    {
+      "id": 2,
+      "name": "VIOLÃO TAYLOR ACADEMY 12E MEXICANO - ELETROACÚSTICO - ACOMPANHA HARD BAG",
+      "description": "Toda a experiência Taylor em um violão elegante, charmoso e cheio de personalidade!",
+      "price": "8.490,00",
+      "image": "vio_taylor2.jpg",
+      "date_delivery": "2 dias",
+      "stock" : 10,
+      "category" : 1
+    },
+    {
+      "id": 3,
+      "name": "VIOLÃO TAKAMINE GD12CE & TP-4T NATURAL FOSCO",
+      "description": "Tecnologia Takamine ao alcance de todos!",
+      "price": "2.690,00",
+      "image": "vio_takamine.jpg",
+      "date_delivery": "2 dias",
+      "stock" : 10,
+      "category" : 1
+    },
+    {
+      "id": 4,
+      "name": "CAVAQUINHO ROZINI RC-09ELN ELÉTRICO ESTUDANTE",
+      "description": "O cavaco tradicional da marca brasileira mais conceituada, na versão elétrica!",
+      "price": "599,00",
+      "image": "cava_rozine.jpg",
+      "date_delivery": "2 dias",
+      "stock" : 10,
+      "category" : 2
+    },
+    {
+      "id": 5,
+      "name": "CAVAQUINHO GIANNINI CS-14 EP NS ELÉTRICO",
+      "description": "A Série Start da Giannini traz ao mercado mais um instrumento com excelente custo-benefício!",
+      "price": "459,00",
+      "image": "cava_gianini.jpg",
+      "date_delivery": "2 dias",
+      "stock" : 10,
+      "category" : 2
+    }
+  ]
+  
+}
