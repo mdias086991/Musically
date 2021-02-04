@@ -1,7 +1,7 @@
 <div class="container  mt-5 mb-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+            <li style="color: #892F1A" class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
         </ol>
     </nav>
@@ -11,27 +11,26 @@
                 <th scope="col">Produto</th>
                 <th scope="col">Quantidade</th>
                 <th scope="col">Preço</th>
-                <th scope="col">Total</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of products">
-                <td *ngIf="product$ | async as productin" class="d-flex justify-content-start align-items-center">
-                    <img src="../../../assets/images/{{productin['image']}}" alt="" width="15%">
-                    <p>{{productin['name']}}</p>
+            <tr *ngFor="let item of productInfo">
+                <td class="d-flex justify-content-start align-items-center">
+                    <img src="../../../assets/images/{{item[0]['image']}}" alt="" width="15%">
+                    <a style="color: #892F1A" [routerLink]="['/product/'] + item[0]['id']"><p>{{item[0]['name']}}</p> </a>
                 </td>
-                <td >
-                    {{item['qte']}} unidade(s)
-                </td>
-                <td *ngIf="product$ | async as productin" >
-                    {{productin['price']}}
+                <td>
+                    {{item[1]}} unidade(s)
                 </td>
                 <td *ngIf="product$ | async as productin" >
-                    {{ (productin['price'] * item['qte']) }}
+                    R$ {{item[0]['price']}}
                 </td>
             </tr>
         </tbody>
       </table>
-      <a routerLink="checkout">Checkout</a>
+      <div class="footer-cart d-flex justify-content-between align-items-center w-100">
+          <a routerLink="checkout" class="btn btn-secondary">Finalizar compra</a>
+          <a routerLink="/" class="btn btn-secondary">Seguir comprando</a>
+    </div>
     
 </div>

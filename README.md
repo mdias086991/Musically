@@ -1,27 +1,22 @@
 # Musically
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Musically é um ecommerce de instrumentos e acessorios musicais, criado para fins não lucativos, a ideia é iniciar um projeto, e sempre gosto de dar uma cara a todos os projetos que desenvolvo, como a música é algo presente na vida de todos, decidi por iniciar o projeto com esse tema.
 
-## Development server
+## Sobre o Musically
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O Musically, foi construido usando o framework angular na sua versão mais atual e para simular uma api, foi usado o Json Server.
 
-## Code scaffolding
+## Iniciando o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Dentro da raiz do projeto execute o comando npm run server, se estiver usando o yarn, execute yarn serve, e caso esteja usando o CLI do Angular, execute ng serve
+2. Para rodar a api em Json, execute o comando json-server --watch db.json na raiz do projeto.
 
-## Build
+## Futuras implementações
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Responsividade das telas
+2. Implementação com alguma api verdadeira ( Feita com o Laravel )
+3. Implementar alguma biblioteca para requisições em real time, para implementar um chat de atendimento ao cliente e para as atualizações de produtos e preços acontecerem quase que instantaneamente.
+4. Dashboard administrativo.
+5. Autenticação do usuario.
+6. Implementação com algum getway de pagamentos.
+7. Implementações de animações nas diversas ações na plataforma.

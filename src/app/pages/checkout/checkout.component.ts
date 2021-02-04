@@ -4,6 +4,7 @@ import { Order } from 'src/app/models/order';
 import { OrderService } from 'src/app/services/order.service';
 import { Product } from '../product/product';
 import { ProductService } from '../product/product.service';
+import { CartComponent} from '../cart/cart.component';
 
 @Component({
   selector: 'app-checkout',
@@ -15,35 +16,34 @@ export class CheckoutComponent implements OnInit {
   public productCart: Array<Object>;
   public product$ : Observable<Product[]>;
   public order = new Order();
+  public info : any = [];
 
   constructor(
     private products : ProductService,
-    private orders: OrderService
+    private orders: OrderService,
+    private cart: CartComponent
+
   ) { }
 
   ngOnInit(): void {
-    this.productCart = JSON.parse(localStorage.getItem('cart') ?? '')
-    this.productCart.forEach((e) => {
-      this.product$ = this.products.getProductById(e['id'])
-    })
+    this.info = this.cart.getProductsIntoCart();
   }
 
-  newOrder(name, cpf, email, payment, productId, quantity) {
+  
+  newOrder(event, name, cpf, email, payment) {
       let orderItems = [ {
         "name": name,
         "email": email,
         "cpf": cpf,
-        "payment": payment,
-        "items": [
-          {
-            "id" : productId
-          }
-        ]
+        "payment": payment
+        
       }
       ]
 
       orderItems.forEach(element => {
-        this.orders.newOrder((element.cpf, element.items, element.name, element.payment));
+        this.orders.newOrder((element.cpf, element.name, element.payment));
+        localStorage.clear();
+        window.location.href = '/'
       });
   }
 

@@ -1,28 +1,31 @@
 <div class="container  mt-5 mb-5" *ngIf="products$ | async as product">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+            <li class="breadcrumb-item" style="color: #892f1a"><a [routerLink]="['/']">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{product['name']}}</li>
         </ol>
     </nav>
     <div class="product-data d-flex justify-content-center align-items-center">
         <div class="image border d-flex justify-content-center align-items-center" style="margin-right: 10%;">
-            <img src="../../../assets/images/{{product['image']}}" alt="" width="30%">
+            <img src="../../../assets/images/{{product['image']}}" alt="" style="width: 25rem">
         </div>
         <div class="information-product">
             <h2>{{product['name']}}</h2>
             <p>{{product['description']}}</p>
-            <p>Produto {{product['stock'] > 0 ? 'Disponivel' :' Indisponivel'}}</p>
+            <p >Produto {{product['stock'] > 0 ? 'Em estoque' :' sem estoque'}}</p>
             <p>Entrega em no máximo {{product['date_delivery']}}</p>
-            <button>Adicionar a lista de desejos</button>
-            <h4>{{product['price']}}</h4>
+            <h4 style="color: #892F1A">R$ {{product['price']}}</h4>
             <hr>
-            <div class="add-to--card">
-                <form (submit)="addCart($event, quantity.value)" enctype="application/x-www-form-urlencoded">
-                    <input type="number" value="1" #quantity id="quantity">
-                    <button >Comparar</button>
+            <div class="add-to--card" *ngIf="product['stock'] > 0; else noProduct" >
+                <form (submit)="addCart($event, quantity.value)" enctype="application/x-www-form-urlencoded" class="d-flex justify-content-start">
+                    <input type="number" value="1" class="form-control d-flex justify-content-center align-items-center" #quantity id="quantity" style="margin-right: 10px; width: 60px; height: 50px; border-radius: 10px">
+                    <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i></button>
                 </form>
             </div>
+            <ng-template #noProduct>
+                <h5>Desculpa! não temos esse produto no estoque no momento!</h5>
+            </ng-template>
         </div>
     </div>
+    
 </div>
