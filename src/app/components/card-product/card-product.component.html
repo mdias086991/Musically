@@ -1,10 +1,19 @@
 <div class="carg-products--group d-flex justify-content-center align-items-center w-100 " style="flex-wrap: wrap;">
-    <div *ngFor="let product of products" class="card mr-4" style="width: 18rem; margin: 1% 2%">
-        <img src=".../../../../../assets/images/{{product.image}}" class="card-img-top" alt="...">
-        <div class="card-body text-center">
-          <h5 class="card-title"><a [routerLink]="['/product/'] + product.id ">{{product.name}}</a></h5>
-          <hr>
-          <a href="http://"><p class="card-text">{{product.price}}</p></a>
+    <div *ngFor="let product of products" class="card mr-4" style="width: 18rem; margin: 1% 2%; position: relative; height: 28rem">
+      <a class="link-product" [routerLink]="['/product/'] + product.id ">  
+        <span class="badge-category">{{product.category}}</span>
+        <img src=".../../../../../assets/images/{{product.image}}" class="card-img-top" alt="..." width="85%">
+        <div class="card-body">
+          <h6 class="card-title">{{product.name}}</h6>
+          <div class="row">
+            <div class="col-7">
+              <p class="card-text">Estoque {{product.stock > 0 ? 'Disponivel' : 'Indisponivel'}}</p>
+            </div>
+            <div class="col-5">
+              <p class="card-text">R$ {{product.price}}</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </a>
+    </div>
 </div>

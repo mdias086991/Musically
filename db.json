@@ -4,26 +4,19 @@
       "id": 1,
       "email": "mathues2006_dias@hotmail.com",
       "password": "12345678",
-      "role" : "admin"
+      "role": "admin"
     }
-  ],
-  "category" : [
-    { "id": 1, "name": "Cordas" }, 
-    { "id": 2, "name": "Percussão" }, 
-    { "id": 3, "name": "Sopro" }, 
-    { "id": 4, "name": "Acessorios"}, 
-    { "id": 5, "name": "Cases e bags"} 
   ],
   "products": [
     {
       "id": 1,
       "name": "VIOLÃO TAYLOR GS MINI-E KOA MEXICANO - ELETROACÚSTICO - ACOMPANHA HARD BAG",
       "price": "10.790,00",
-      "description" : "Uma versão hipnotizante da série GS Mini da Taylor toda produzida em madeira de KOA.",
+      "description": "Uma versão hipnotizante da série GS Mini da Taylor toda produzida em madeira de KOA.",
       "image": "vio_taylor.jpg",
       "date_delivery": "2 dias",
-      "stock" : 10,
-      "category" : 1 
+      "stock": 10,
+      "category": "violões"
     },
     {
       "id": 2,
@@ -32,8 +25,8 @@
       "price": "8.490,00",
       "image": "vio_taylor2.jpg",
       "date_delivery": "2 dias",
-      "stock" : 10,
-      "category" : 1
+      "stock": 10,
+      "category": "violões"
     },
     {
       "id": 3,
@@ -42,8 +35,8 @@
       "price": "2.690,00",
       "image": "vio_takamine.jpg",
       "date_delivery": "2 dias",
-      "stock" : 10,
-      "category" : 1
+      "stock": 10,
+      "category": "violões"
     },
     {
       "id": 4,
@@ -52,8 +45,8 @@
       "price": "599,00",
       "image": "cava_rozine.jpg",
       "date_delivery": "2 dias",
-      "stock" : 10,
-      "category" : 2
+      "stock": 10,
+      "category": "violões"
     },
     {
       "id": 5,
@@ -62,9 +55,113 @@
       "price": "459,00",
       "image": "cava_gianini.jpg",
       "date_delivery": "2 dias",
-      "stock" : 10,
-      "category" : 2
+      "stock": 10,
+      "category": "violões"
+    },
+    {
+      "id": 6,
+      "name": "BATERIA X-PRO STAGE COMPLETA C/ BANCO E PRATOS PRETA BAT220 STG",
+      "description": "Bateria X-Pró Stage Completa c/ Banco e pratos Preta BAT220 STG   Uma bateria acessível e de alta qualidade produzida pela X-Pró! Com uma produção de maior nível, equipada com peles hidráulicas e ferragens mais reforçadas, desenvolvid",
+      "price": "3.100,00",
+      "image": "bateria1.jpg",
+      "date_delivery": "2 dias",
+      "stock": 10,
+      "category": "percussão"
+    },
+    {
+      "id": 7,
+      "name": "BATERIA ELETRÔNICA X-PRO ED20",
+      "description": "Bateria Eletrônica X-PRO ED20 A bateria Eletrônica C.Ibanez X-pro ED20 é o lançamento de maior sucesso da marca nesse ano de 2017.",
+      "price": "5.990,00",
+      "image": "bateria2.jpg",
+      "date_delivery": "8 dias",
+      "stock": 10,
+      "category": "percussão"
+    },
+    {
+      "id": 8,
+      "name": "BATERIA X-PRO STAGE DE 3 TONS COMPLETA C/ BANCO E PRATOS VERMELHA BAT320 STG3T",
+      "description": "Uma bateria acessível e de alta qualidade produzida pela X-Pró! ",
+      "price": "3.990,00",
+      "image": "bateria3.jpg",
+      "date_delivery": "8 dias",
+      "stock": 10,
+      "category": "percussão"
+    },
+    {
+      "id": 9,
+      "name": "FLAUTA DOCE YAMAHA BARROCA YRS-24B",
+      "description": "Flauta Doce Yamaha Barroca YRS-24B Fácil de tocar com precisão e entonação uniforme, para músicos de todos os níveis. Possui sistema de digitação barroca, perfeita para utilização popular e em escolas de músicas.",
+      "price": "49,00",
+      "image": "flauta1.jpg",
+      "date_delivery": "1 dias",
+      "stock": 10,
+      "category": "sopros"
+    },
+    {
+      "id": 10,
+      "name": "FLAUTA DOCE YAMAHA GERMÂNICA YRS-23G",
+      "description": "Flauta Doce Yamaha Germânica YRS-23G Fácil de tocar com precisão e entonação uniforme, para músicos de todos os níveis. Possui sistema de digitação germânica, perfeita para utilização popular e em escolas de música",
+      "price": "49,90",
+      "image": "flauta2.jpg",
+      "date_delivery": "1 dias",
+      "stock": 10,
+      "category": "sopros"
+    },
+    {
+      "id": 11,
+      "name": "GAITA DE BOCA HARMÔNICA HOHNER BLUES BAND 559/20 EM A",
+      "description": "Gaita de Boca Harmônica Hohner Blues Band 559/20 em A A Blues Band possui uma afinação extremamente precisa devido as novas ferramentas utilizadas em sua fabricação. Um som único com timbre que é referência para blues, folk e rock.",
+      "price": "130,00",
+      "image": "gaita.jpg",
+      "date_delivery": "1 dias",
+      "stock": 0,
+      "category": "sopros"
+    },
+    {
+      "id": 11,
+      "name": "ENCORDOAMENTO PARA VIOLINO D'ADDARIO A310 ASCENTE TENSÃO MÉDIA",
+      "description": "Um encordoamento de violino para quem busca evoluir na mundo orquestral com requinte e elegância.",
+      "price": "220,00",
+      "image": "acce1.jpg",
+      "date_delivery": "1 dias",
+      "stock": 0,
+      "category": "acessorios"
+    },
+    {
+      "id": 12,
+      "name": "EQUALIZADOR RONSANI UK-2000 PARA UKULELE",
+      "description": "Um equalizador ativo desenvolvido exclusivamente para ukuleles!",
+      "price": "139,00",
+      "image": "acc2.jpg",
+      "date_delivery": "1 dias",
+      "stock": 0,
+      "category": "acessorios"
+    },
+    {
+      "id": 13,
+      "name": "MAQUINA DE HI-HAT X-PRO HH STD",
+      "description": "Máquina de Hi-Hat X-Pró HH STD Máquina para o chimbal. Um modelo de excelente custo benefício, com ótima durabilidade e robustez, mas que se mantém com leveza e praticidade. Possui ajuste de altura com memória e regulagem da resistência do pedal",
+      "price": "339,00",
+      "image": "acc3.jpg",
+      "date_delivery": "1 dias",
+      "stock": 0,
+      "category": "acessorios"
+    },
+    {
+      "id": 14,
+      "name": "CAPA PARA VIOLÃO CLÁSSICO ESTOFADA AKUSTICA MUSICAL",
+      "description": "Uma ótima opção de capa com um bom custo benefício!",
+      "price": "125,00",
+      "image": "capa.jpg",
+      "date_delivery": "1 dias",
+      "stock": 5,
+      "category": "cases"
     }
+    
+  ],
+  "orders": [
+    
+      
   ]
-  
 }

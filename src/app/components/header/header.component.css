@@ -1,11 +1,24 @@
 .top-header {
     height: 3rem;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px dashed #892F1A;
 }
 .top-header p,
 .top-header a {
     font-size: 8pt;
-    color: #c5c5c5;
+    color: #892F1A;
+}
+.number-products {
+    position: absolute;
+    top: -7px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #892F1A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .menu-category {
     background: #892F1A;
@@ -34,4 +47,14 @@
     width: 5%;
     background: #c5c5c5;
     transform: rotate(90deg);
+}
+.items-menu nav ul a {
+    transition: .6s;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-size: 8pt;
+}
+.items-menu nav ul a:hover {
+    background: #772513;
+    border-radius: 3px;
 }

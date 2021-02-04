@@ -19,11 +19,15 @@ export class ProductService {
     return this.http.get<Product[]>(this.API_PRODUCT);
   }
 
+  newProduct(): Observable<Product[]> {
+    return 
+  }
+
   getProductById(id: number): Observable<Product[]> {
     return this.http.get<Product[]>(this.API_PRODUCT + id);
   }
 
-  getProductsByCategory(category_id: number): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.API_PRODUCT}/?category=${category_id}`)
+  getProductsByCategory(category_name: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.API_PRODUCT}/?category=${category_name}`)
   } 
 }

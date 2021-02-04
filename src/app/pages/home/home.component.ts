@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   public products$ : Observable<Product[]>
   public productById$ : Observable<Product[]>
+  public textProduct : string;
 
   constructor(
     private products : ProductService,
@@ -24,7 +25,9 @@ export class HomeComponent implements OnInit {
       if(parametros['category_id']) {
         // console.log(parametros['category_id'])
         this.products$ = this.products.getProductsByCategory(parametros['category_id']);
+        this.textProduct = parametros['category_id'];
       } else {
+        this.textProduct = 'Todos os nossos produtos';
         this.products$ = this.products.getProducts();
       }
     })

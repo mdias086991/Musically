@@ -1,18 +1,18 @@
 <header>
   <div class="top-header w-100 d-flex justify-content-around align-items-center">
     <p class="mb-0">Horário de atendimento online: Segunda a Sábado das 09:00 hrs às 18:30</p>
-    <a href="http://">Acessar a área restrita</a>
+    <a routerLink="/dashboard">Acessar a área restrita</a>
     <p class="mb-0">(71) 99225-2762</p>
   </div>
   <div class="middle-header w-100 d-flex justify-content-around align-items-center">
-    <div class="logo">
-      <a routerLink="/"><h2>Musically</h2></a> 
+    <div class="logo" >
+      <a routerLink="/" style="height: 50px; width: 50px; overflow:hidden"><img src="../../../assets/images/logo.png" alt=""></a> 
     </div>
-    <div class="left-items d-flex justify-content-around align-items-center mt-5 mb-5" style="width: 54%">
+    <div class="left-items d-flex justify-content-around align-items-center mt-5 mb-5">
       <div class="cart" style="position: relative;">
-        <a routerLink="cart" data-bs-toggle="tooltip" title="Você tem {{qtd_products.length}} produtos no carrinho">
-          <span style="position: absolute; top: -20px; right: 0">{{qtd_products.length}}</span>
-          <i class="fas fa-shopping-cart fa-2x"></i>
+        <a routerLink="cart"  data-bs-toggle="tooltip" title="Você tem {{qtd_products.length}} produtos no carrinho">
+          <span class="number-products">{{qtd_products ? qtd_products.length : 0 }}</span>
+          <i class="fas fa-shopping-cart fa-3x" style="color: black"></i>
         </a>
       </div>
     </div>
@@ -21,38 +21,38 @@
     <div class="container items-menu">
         <nav>
           <ul class="d-flex justify-content-between align-items-center">
-            <a [routerLink]="['/product/category/' + 1]">
+            <a routerLink="/product/category/violões">
               <div class="item-link text-center">
                 <img src="../../../assets/images/guittar.png" alt="">
                 <li>Cordas</li>
               </div>
             </a>
             <div class="separator"></div>
-            <a href="http://">
+            <a routerLink="/product/category/percussão">
               <div class="item-link text-center">
                 <img src="../../../assets/images/perc.png" alt="">
                 <li>Percussão</li>
               </div>
             </a>
             <div class="separator"></div>
-            <a href="http://">
+            <a routerLink="/product/category/sopros">
               <div class="item-link text-center">
                 <img src="../../../assets/images/sop.png" alt="">
                 <li>Sopro</li>
               </div>
             </a>
             <div class="separator"></div>
-            <a href="http://">
+            <a routerLink="/product/category/acessorios">
               <div class="item-link text-center">
                 <img src="../../../assets/images/ace.png" alt="">
                 <li>Acessorios</li>
               </div>
             </a>
             <div class="separator"></div>
-            <a href="http://">
+            <a routerLink="/product/category/cases">
               <div class="item-link text-center">
                 <img src="../../../assets/images/case.png" alt="">
-                <li>Cases e bags</li>
+                <li>Cases</li>
               </div>
             </a>
           </ul>

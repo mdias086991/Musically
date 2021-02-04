@@ -18,6 +18,8 @@ import { FinishSaleComponent } from './pages/finish-sale/finish-sale.component';
 import { ProductComponent } from './pages/product/product.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ShopNowComponent } from './pages/shop-now/shop-now.component';
+import { FormsModule } from '@angular/forms';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ShopNowComponent } from './pages/shop-now/shop-now.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

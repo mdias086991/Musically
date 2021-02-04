@@ -1,1 +1,68 @@
-<p>checkout works!</p>
+<div class="container" *ngIf="product$ | async as productin">
+    <form (submit)="newOrder($event, nome.value, cpf.value, email.value, payment.value, productin['id'])">
+        <h3>Finalizar compra</h3>
+        <hr>
+        <div class="form-group row">
+            <h5>Dados pessoais</h5>
+            <hr>
+            <div class="col-md-4 col-sm-12">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nome completo</label>
+                  <input type="email" class="form-control" #nome aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">CPF</label>
+                  <input type="text" class="form-control" #cpf>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">E-mail</label>
+                  <input type="text" class="form-control" #email>
+                </div>
+            </div>
+        </div >
+        <div class="mb-3">
+            <h5>Formas de pagamento</h5>
+            <hr>
+            <select name="" class="form-control" #payment>
+                <option value="">Dinheiro</option>
+                <option value="">Crédito</option>
+                <option value="">Boleto</option>
+                <option value="">Pix</option>
+            </select>
+        </div>
+        <h5>Meus produtos</h5>
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of productCart">
+                    <td  class="d-flex justify-content-start align-items-center">
+                        <img src="../../../assets/images/{{productin['image']}}" alt="" width="15%">
+                        <p>{{productin['name']}}</p>
+                    </td>
+                    <td >
+                        {{item['qte']}} unidade(s)
+                    </td>
+                    <td>
+                        {{productin['price']}}
+                    </td>
+                    <td >
+                        {{ (productin['price'] * item['qte']) }}
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+
+        <button type="submit" class="btn btn-primary">Realizar pagamento</button>
+      </form>
+</div>
